@@ -1,5 +1,5 @@
 mixin header(data)
-    .header(class!=data)
+    .header
         .header-mobile.hidden-lg-up.not-styleLink
             .header__siteBar
                 .header__siteBar-cell.header__siteBar-cell_btn
@@ -14,7 +14,7 @@ mixin header(data)
                 .header__siteBar-cell.text-center
                     a(href='#').db.header-mobile__phone +7 919 345 48 40
 
-                .header__siteBar-cell.header__siteBar-cell_btn.text-center
+                //.header__siteBar-cell.header__siteBar-cell_btn.text-center
                     a(href='#'): +icon('phone')
 
 

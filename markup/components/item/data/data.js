@@ -1,5 +1,26 @@
 var data = {
     item: {
-        list: []
+        list: [
+            {
+                img: 'assets/item/1',
+                title: 'Зефирная косичка',
+                desc: '10 гр. 12*36',
+            },
+            {
+                img: 'assets/item/2',
+                title: 'Зефирная косичка',
+                desc: '10 гр. 12*36',
+            },
+            {
+                img: 'assets/item/3',
+                title: 'Зефирная косичка',
+                desc: '10 гр. 12*36',
+            },
+            {
+                img: 'assets/item/2',
+                title: 'Зефирная косичка',
+                desc: '10 гр. 12*36',
+            },
+        ]
     }
 };

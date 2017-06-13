@@ -6,6 +6,7 @@ html(class="no-js", lang="ru")
     include ../components/header/header
     include ../components/footer/footer
     include ../components/modal/modal
+    include ../components/item/item
 
     head
         //- start  block head
@@ -24,23 +25,32 @@ html(class="no-js", lang="ru")
         |%=symbols=%
 
         section.page__wrapper
-            +header(index)
-            -if(!breadcrumb)
-                .container
-                    br.hidden-md-down
-                    br
-                    br
-                    ul.breadcrumb.not-styleLink
-                        li: a(href="#"): span Главная
-                        li: span= dataPage.title
+            +header()
+            if index
+                +img('content/img-index')(style="width: 100%;")
+                br
+                br
+                br
+                br
+            .container
+                -if(!breadcrumb)
+                        br.hidden-md-down
+                        br
+                        br
+                        ul.breadcrumb.not-styleLink
+                            li: a(href="#"): span Главная
+                            li: span= dataPage.title
 
-                    h1= dataPage.title
+                h1= dataPage.title
 
             //- Include your components here
             // start block content
+            - var className = ''
+            if index
+                - className = 'content__wrapper_after'
             .content
                 .container
-                    .content__wrapper
+                    .content__wrapper(class=className)
                         block content
 
                         .callback

@@ -13,6 +13,28 @@ body, html{
 }
 
 @include my-media-query(max, map_get($grid-breakpoints, lg) - 1) {
+  .item-list{
+    &__section{
+      width: 50%;
+    }
+  }
+  .catalog-list {
+    &__section {
+      width: 50%;
+    }
+  }
+  .catalog-list__item{
+    height: auto;
+    &-icon {
+      line-height: 100px;
+      img{
+        max-height: 100px;
+      }
+    }
+  }
+  .catalog-list__item-title {
+    font-size: 15px;
+  }
   .footer {
     &__table {
       display: block;
@@ -56,6 +78,20 @@ body, html{
 }
 
 @include my-media-query(min, map_get($grid-breakpoints, lg)) {
+  .content{
+    &__wrapper{
+      &_after{
+        &:after{
+          content: url('%=static=%general/content__wrapper_after.png');
+          display: block;
+          position: absolute;
+          bottom: 100%;
+          right: 6%;
+          margin-bottom: -19px;
+        }
+      }
+    }
+  }
   .footer {
     > .container {
       position: relative;
@@ -71,10 +107,33 @@ body, html{
 }
 
 @include my-media-query(min, map_get($grid-breakpoints, xl)) {
-
+  .content__wrapper_after:after{
+    right: 13.7%;
+  }
 }
 
 @include my-media-query(max, map_get($grid-breakpoints, md) - 1) {
+  .item {
+    padding: 10px;
+    padding-bottom: 0;
+    padding-top: 6px;
+    &__btn{
+      display: none;
+    }
+    &__img {
+      line-height: 90px;
+      img{
+        max-height: 90px;
+      }
+    }
+    &__title {
+      font-size: 14px;
+    }
+    &__desc {
+      font-size: 14px;
+      line-height: 22px;
+    }
+  }
   .block-maps{
     height: 350px;
   }
@@ -138,6 +197,11 @@ body, html{
 }
 
 @include my-media-query(max, map_get($grid-breakpoints, sm) - 1) {
+  .item-list{
+    &__section{
+    }
+  }
+
   .contact{
     &__list{
       &-section{

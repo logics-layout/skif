@@ -1,0 +1,49 @@
+//h2 Хиты продаж
+
+.catalog-list.not-styleLink
+    .catalog-list__section
+        a(href='#').db
+            span.db.catalog-list__item
+                span.db.catalog-list__item-icon: +img('content/category/category-1', 'png')
+                span.db.catalog-list__item-title: span Аскорбинка
+    .catalog-list__section
+        a(href='#').db
+            span.db.catalog-list__item
+                span.db.catalog-list__item-icon: +img('content/category/category-2', 'png')
+                span.db.catalog-list__item-title: span Драже
+    .catalog-list__section
+        a(href='#').db
+            span.db.catalog-list__item
+                span.db.catalog-list__item-icon: +img('content/category/category-3', 'png')
+                span.db.catalog-list__item-title: span Карамель
+    .catalog-list__section
+        a(href='#').db
+            span.db.catalog-list__item
+                span.db.catalog-list__item-icon: +img('content/category/category-4', 'png')
+                span.db.catalog-list__item-title: span Зефирная косичка
+    .catalog-list__section
+        a(href='#').db
+            span.db.catalog-list__item
+                span.db.catalog-list__item-icon: +img('content/category/category-5', 'png')
+                span.db.catalog-list__item-title: span Шипучка
+    .catalog-list__section
+        a(href='#').db
+            span.db.catalog-list__item
+                span.db.catalog-list__item-icon: +img('content/category/category-6', 'png')
+                span.db.catalog-list__item-title: span Жидкая конфета
+    .catalog-list__section
+        a(href='#').db
+            span.db.catalog-list__item
+                span.db.catalog-list__item-icon: +img('content/category/category-7', 'png')
+                span.db.catalog-list__item-title: span Жевательная резинка
+    .catalog-list__section.hidden-md-down
+        span.db.catalog-list__item-download
+            span.db.catalog-list__item-download-icon: +icon('lists')
+            a(href="#").db.catalog-list__item-download-title.color-greyTwo: span.color-greyTwo__title.color-greyTwo__title_viewBorder.color-greyTwo__title_dashed Скачайте прайс-лист
+            a(href="#").db: span.db.catalog-list__item-download-btn Перейти в каталог
+br
+h2.color-purpleTwo Хиты продаж
+
+.item-list
+    - for(var i = 0; i<4; i++)
+        .item-list__section: +item(i)

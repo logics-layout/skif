@@ -5,3 +5,11 @@ mixin item(num)
         - rowItem = item.list[num]
     - else
         - rowItem = item.list[0]
+
+
+    a(href='#').db.not-styleLink
+        soan.db.item
+            soan.db.item__img: +img(rowItem.img)
+            soan.item__title: span= rowItem.title
+            soan.db.item__desc= rowItem.desc
+            soan.item__btn Смотреть товар

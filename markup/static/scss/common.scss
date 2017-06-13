@@ -119,3 +119,112 @@ body {
 .block-maps{
   height: 530px;
 }
+
+.catalog-list{
+  font-size: 0;
+  margin: -13.5px;
+  &__section{
+    font-size: 14px;
+    display: inline-block;
+    vertical-align: top;
+    width: 25%;
+    padding: 13.5px;
+  }
+  &__item{
+    display: block;
+    background-color: white;
+    border: 2px solid #cdcdcd;
+    border-radius: 4px;
+    text-align: center;
+    padding: 24px 15px;
+    padding-bottom: 0;
+    height: 240px;
+    &-icon{
+      line-height: 140px;
+      img{
+        max-height: 140px;
+      }
+    }
+    &-title{
+      color: #8a6b76;
+      font-size: 18px;
+      font-weight: 700;
+      line-height: normal;
+      display: table;
+      width: 100%;
+      height: 72px;
+      >span{
+        display: table-cell;
+        vertical-align: middle;
+      }
+    }
+    &:hover{
+      background-color: #ffe4ee;
+      border-color: #d6437a;
+      border-radius: 4px;
+      box-shadow: 0 10px 15px rgba(103, 23, 121, 0.15);
+      .catalog-list__item-title{
+        color: #d6437a;
+      }
+    }
+    &-download{
+      background-color: white;
+      border: 1px dashed #af88b8;
+      border-radius: 4px;
+      text-align: center;
+      padding-bottom: 27px;
+      padding-top: 22px;
+      height: 240px;
+      &-icon{
+        svg{
+          fill: #d6437a;
+        }
+      }
+      &-title{
+        color: #7e7e7e;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 22px;
+        padding: 16px 0;
+        padding-bottom: 26px;
+      }
+      &-btn{
+        color: #d6437a;
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 50px;
+        background-color: white;
+        border: 2px solid #d6437a;
+        border-radius: 4px;
+        text-transform: uppercase;
+        width: 171px;
+        max-width: 85%;
+        display: inline-block;
+        &:hover{
+          background-color: #d6437a;
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
