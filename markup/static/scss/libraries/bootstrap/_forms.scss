@@ -32,7 +32,7 @@ legend {
 label {
   display: inline-block;
   max-width: 100%; // Force IE8 to wrap long content (see https://github.com/twbs/bootstrap/issues/13141)
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 
   color: #818181;
   font-size: 14px;
@@ -131,18 +131,18 @@ output {
   //border-radius: 3px;
   //box-shadow: inset 0.1px 2px 5px rgba(89, 132, 154, 0.13);
 
-  background-color: white;
-  border: 1px solid #dadada;
-  border-radius: 4px;
-  //box-shadow: inset 0.1px 1px 3px rgba(0, 0, 0, 0.3);
-
   // Customize the `:focus` state to imitate native WebKit styles.
-  @include form-control-focus(#ef9c00);
+  @include form-control-focus(#d6437a);
   font-size: 15px;
   font-weight: 400;
 
+  border: 2px solid #e6e6e6;
+  border-radius: 4px;
+
+  &:hover{
+    box-shadow: 0 5px 15px -3px rgba(0, 0, 0, 0.11);
+  }
   &:focus{
-    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.15);
   }
 
   // Placeholder

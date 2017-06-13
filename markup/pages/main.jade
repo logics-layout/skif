@@ -23,16 +23,48 @@ html(class="no-js", lang="ru")
             +header(index)
             -if(!breadcrumb)
                 .container
+                    br.hidden-md-down
                     br
                     br
                     ul.breadcrumb.not-styleLink
                         li: a(href="#"): span Главная
                         li: span О компании
+                    - if(headData)
+                        h1.title-page= headData.title
+                    - else
+                        h1.title-page= head.defaults.title
 
             //- Include your components here
-            //- start block content
-            block content
-            //- end block content
+            // start block content
+            .content
+                .container
+                    .content__wrapper
+                        block content
+
+                        .callback
+                            p.callback__title Возникли вопросы?
+                            p.callback__titleSub Отправьте заявку и наши менеджеры свяжутся с Вами в ближайшее время
+                            hr
+                            form.callback__form
+                                .row
+                                    .col-lg-3
+                                        .form-group
+                                            label Как к вам обращаться?
+                                            input.form-control(placeholder="")
+                                    .col-lg-3
+                                        .form-group
+                                            label Как к вам обращаться?
+                                            input.form-control(placeholder="")
+                                    .col-lg-3
+                                        .form-group
+                                            label Как к вам обращаться?
+                                            input.form-control(placeholder="")
+                                    .col-lg-3
+                                        .form-group
+                                            label &nbsp;
+                                            button.btn.btn-purple.btn-width.ttu Отправить заявку
+
+            // end block content
 
 
             .page__buffer

@@ -75,10 +75,60 @@ body, html{
 }
 
 @include my-media-query(max, map_get($grid-breakpoints, md) - 1) {
+  .callback {
+    &__title {
+      text-align: center;
+      font-size: 28px;
+      margin-bottom: 8px;
+    }
+    &__titleSub {
+      text-align: center;
+      font-size: 14px;
+    }
+  }
+  h1, .h1{
+    font-size: 43px;
+  }
+  h2, .h2{
+    font-size: 28px;
+  }
 
+  .content{
+    margin-top: 60px;
+    padding-bottom: 0;
+    &__wrapper{
+      padding: 25px 15px;
+      margin: 0 -15px;
+      display: block;
+      width: auto;
+      box-shadow: 0 0 0;
+    }
+  }
+  .suggestions{
+    &__list{
+      li{
+        width: 50%;
+      }
+    }
+    &__item{
+      &-icon{
+        margin-bottom: 0;
+        svg{
+          width: 100px;
+          max-height: 72px;
+        }
+      }
+    }
+  }
 }
 
 @include my-media-query(max, map_get($grid-breakpoints, sm) - 1) {
+  h1, .h1{
+    font-size: 38px;
+  }
+  h2, .h2{
+    font-size: 25px;
+  }
 
   .footer__copyrightBlock{
     background: rgba(238, 238, 238, 0.26);

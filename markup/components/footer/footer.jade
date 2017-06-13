@@ -1,4 +1,26 @@
 mixin footer(data)
+    .suggestions
+        .container
+            h2 Что мы предлагаем?
+            br
+            ul.suggestions__list.text-center
+                li
+                    .suggestions__item
+                        .suggestions__item-icon: +icon('low-price')
+                        .suggestions__item-title Низкие цены
+                li
+                    .suggestions__item
+                        .suggestions__item-icon: +icon('shipping')
+                        .suggestions__item-title Бесплатная доставка*
+                li
+                    .suggestions__item
+                        .suggestions__item-icon: +icon('like')
+                        .suggestions__item-title Индивидуальный подход
+                li
+                    .suggestions__item
+                        .suggestions__item-icon: +icon('purse')
+                        .suggestions__item-title Отсрочка платежа
+
     footer.footer.not-styleLink
         .container
             .footer__text
