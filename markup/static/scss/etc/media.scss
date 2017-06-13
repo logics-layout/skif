@@ -75,6 +75,17 @@ body, html{
 }
 
 @include my-media-query(max, map_get($grid-breakpoints, md) - 1) {
+  .block-maps{
+    height: 350px;
+  }
+  .contact{
+    &__list{
+      &-section{
+        width: 50%;
+      }
+    }
+  }
+
   .callback {
     &__title {
       text-align: center;
@@ -102,6 +113,10 @@ body, html{
       display: block;
       width: auto;
       box-shadow: 0 0 0;
+      &-well{
+        margin-left: -15px;
+        margin-right: -15px;
+      }
     }
   }
   .suggestions{
@@ -123,6 +138,13 @@ body, html{
 }
 
 @include my-media-query(max, map_get($grid-breakpoints, sm) - 1) {
+  .contact{
+    &__list{
+      &-section{
+        width: 100%;
+      }
+    }
+  }
   h1, .h1{
     font-size: 38px;
   }

@@ -10,11 +10,15 @@ html(class="no-js", lang="ru")
     head
         //- start  block head
         link(href="%=static=%css/separate-css/slick.css", rel="stylesheet", type="text/css")
+
         block head
+        - var dataPage = '';
         - if(headData)
-            +head(headData)
+            - dataPage = headData
         - else
-            +head(head.defaults)
+            - dataPage = head.defaults
+
+        +head(dataPage)
         //- end  block head
     body.page
         |%=symbols=%
@@ -28,11 +32,9 @@ html(class="no-js", lang="ru")
                     br
                     ul.breadcrumb.not-styleLink
                         li: a(href="#"): span Главная
-                        li: span О компании
-                    - if(headData)
-                        h1.title-page= headData.title
-                    - else
-                        h1.title-page= head.defaults.title
+                        li: span= dataPage.title
+
+                    h1= dataPage.title
 
             //- Include your components here
             // start block content

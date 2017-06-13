@@ -1,0 +1,80 @@
+extends main
+
+block head
+    - var headData = {title: "Контакты"}
+
+    link(href="%=static=%css/separate-css/slick.css", rel="stylesheet", type="text/css")
+
+block content
+
+    .contact__list.text-center
+        .contact__list-section
+            .contact__item
+                .contact__item-icon: +icon('label')
+                .contact__item-title Адрес:
+                .contact__item-content г. Челябинск, ул. 2-я Потребительская 22, база "Шининвест" склад № 5
+        .contact__list-section
+            .contact__item
+                .contact__item-icon: +icon('phone')
+                .contact__item-title Телефон:
+                .contact__item-content.not-styleLink
+                    a(href="#").color-greyTwo: span.color-greyTwo__title +7 (919) 345 92 00
+                    br
+                    a(href="#").color-greyTwo: span.color-greyTwo__title +7 (919) 345 48 40
+        .contact__list-section
+            .contact__item
+                .contact__item-icon: +icon('email')
+                .contact__item-title Эл. почта:
+                .contact__item-content: a(href="#") skif174.sweet.toy@gmail.com
+
+    br
+    br
+
+    .content__wrapper-well
+        .block-maps
+            script(type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ai6bPkEnXssUUjpSC1mlIpdAXIymwLSB-&amp;width=100%&amp;height=100%&amp;lang=ru_RU&amp;scroll=false")
+
+
+
+
+
+
+block script
+    script(src="%=static=%js/separate-js/slick.min.js" type="text/javascript")
+    script(src="%=static=%js/separate-js/jquery.magnific-popup.min.js" type="text/javascript")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
