@@ -1,3 +1,73 @@
 .footer{
+  background: #fff;
+  padding-top: 60px;
+  &__text{
+    width: 901px;
+    max-width: 100%;
+  }
+  &__bottom{
+    border-top: 1px solid #d6437a;
+    padding: 29px 0;
+  }
+  &__table{
+    display: table;
+    width: 100%;
+    &-cell{
+      display: table-cell;
+      vertical-align: middle;
+      +*{
+        padding-left: 10px;
+      }
+    }
+  }
+  &__tableLogo{
+    display: table;
+    &-cell{
+      display: table-cell;
+      vertical-align: middle;
+      +*{
+        padding-left: 24px;
+      }
+    }
+  }
+  &__copyright{
+    display: table;
+    color: #7e7e7e;
+    text-align: left;
+    fill: #d6437a;
+    &:hover{
+      fill: #be3e67;
+    }
+    &-section{
+      display: table-cell;
+      vertical-align: middle;
+      +*{
+        padding-left: 11px;
+      }
+    }
+    &-cloud{
+      color: white;
+      font-size: 14px;
+      font-weight: 700;
+      position: relative;
+      &-icon{
 
+      }
+      &-title{
+        position: absolute;
+        left: 0;
+        width: 100%;
+        z-index: 1;
+        top: 0;
+        text-align: center;
+        line-height: 60px;
+      }
+    }
+  }
+  &__copyrightBlock{
+    text-align: right;
+    &-content{
+      display: inline-block;
+    }
+  }
 }

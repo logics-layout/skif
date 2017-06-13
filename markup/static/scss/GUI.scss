@@ -10,10 +10,19 @@
 @import "libraries/bootstrap/navs";
 @import "libraries/bootstrap/dropdowns";
 
+svg{
+  display: inline-block;
+  vertical-align: middle;
+}
+.dib{
+  display: inline-block;
+  vertical-align: middle;
+}
+
 a{
   //color: #e74700;
   //text-decoration: underline;
-  color: #ef9c00;
+  color: #39afe0;
   cursor: pointer;
   text-decoration: none;
   &:focus {
@@ -23,7 +32,7 @@ a{
     text-decoration: none;
   }
   &:not(.not-styleLink){
-    @include link-border-color(#ef9c00);
+    @include link-border-color(#39afe0);
   }
   .not-styleLink{
     text-decoration: underline;
@@ -400,6 +409,6 @@ table{
 
 
 
-
-
+@include text-border-bottom('grey', #d7447a);
+@include text-border-bottom('purple', #d7447a);
 

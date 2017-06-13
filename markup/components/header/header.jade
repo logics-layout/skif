@@ -1,5 +1,95 @@
 mixin header(data)
-    .header(class!=data).not-styleLink
+    .header(class!=data)
+        .header-mobile.hidden-lg-up.not-styleLink
+            .header__siteBar
+                .header__siteBar-cell.header__siteBar-cell_btn
+                    button.header-mobile__btn.header-mobile__btn_toggle-menu
+                        .mobile-list-anim
+                            input(type="checkbox", id="header-bottom-toggleMenuMbl")
+                            label.menuTopMobel(for="header-bottom-toggleMenuMbl")
+                                span.menu-mobile
+                                    span.menu-mobile-hamburger.one
+                                    span.menu-mobile-hamburger.two
+                                    span.menu-mobile-hamburger.three
+                .header__siteBar-cell.text-center
+                    a(href='#').db.header-mobile__phone +7 919 345 48 40
+
+                .header__siteBar-cell.header__siteBar-cell_btn.text-center
+                    a(href='#'): +icon('phone')
+
+
+            .header-mobile__toggle
+                a(href='#').header-mobile__toggle-buffer
+                .header-mobile__toggle-content
+                    form.header-mobile__search
+                        input(placeholder="Поиск по сайту").header-mobile__search-input
+                        button.header-mobile__search-btn: +icon('search', 'svg-search', 28, 28)
+
+                    .header-mobile__nav
+                        ul
+                            li: a(href="#") Каталог товаров
+                            li: a(href="#") О компании
+                            li: a(href="#") Акции
+                            li: a(href="#") Контакты
+
+            .header-mobile__logoBlock.text-center
+                a(href='#').header-mobile__logo: +img('assets/header/logo', 'png')
+
+
+
+        .header-desktop.hidden-md-down
+            .header__logo-block.not-styleLink
+                .container
+                    a(href='#').header__logo: +img('assets/header/logo', 'png')
+
+            .header__top
+                .container
+                    .row: .col-lg-offset-2.col-lg-10
+                        .header__top-table
+                            .header__top-table-cell
+                                span Детские кондитерские изделия #[br] и продукты питания оптом
+                            .header__top-table-cell
+                                a(href="#") skif174.sweet.toy@gmail.com
+                                br
+                                a(href="#") skif174.sweet.toy@gmail.com
+                            .header__top-table-cell.not-styleLink
+                                a(href="#").header__phone.color-grey: span.color-grey__title +7 919 #[span.color-purple 345 48 40]
+                                br
+                                a(href="#").header__phone.color-grey: span.color-grey__title +7 919 #[span.color-purple 345 48 40]
+                            .header__top-table-cell.header__top-table-cell_btn.not-styleLink
+                                a(href="#"): span.btn.btn-purple.btn-width ЗАКАЗАТЬ ЗВОНОК
+
+
+            .header__bottom.not-styleLink
+                .container
+                    .row: .col-lg-offset-2.col-lg-10
+                        .header__top-table
+                            .header__top-table-cell
+                                .header__nav
+                                    ul
+                                        li
+                                            a(href="#") #[+icon('list')] &nbsp; #[span Каталог товаров]
+                                            .header__nav-subMenu
+                                                ul
+                                                    li: a(href='#') Аскорбинка
+                                                    li: a(href='#') Драже
+                                                    li: a(href='#') Карамель
+                                                    li: a(href='#') Зефирная косичка
+                                                ul
+                                                    li: a(href='#') Шипучка
+                                                    li: a(href='#') Жидкая конфета
+                                                    li: a(href='#') Жевательная резинка
+
+                                        li: a(href="#"): span О компании
+                                        li: a(href="#"): span Акции
+                                        li: a(href="#"): span Контакты
+                            .header__top-table-cell.text-right
+                                a(href="#").header__search: +icon('search')
+
+
+
+
+
 
 
 

@@ -13,33 +13,35 @@
 // 800 -> Heavy, Extra Bold
 // 900 -> Black
 
-@include font-face("HelveticaNeueCyr", "../fonts/HelveticaNeueCyr/HelveticaNeueCyr-Black", $file-formats: eot woff ttf svg){
+@include font-face("Clear Sans", "../fonts/clearsans/clearsans", $file-formats: woff woff2 ttf){
   font-style: normal;
-  font-weight: 900;
+  font-weight: 400;
 };
-
-@include font-face("HelveticaNeueCyr", "../fonts/HelveticaNeueCyr/HelveticaNeueCyr-Bold", $file-formats: eot woff ttf svg){
+@include font-face("Clear Sans", "../fonts/clearsans/clearsansitalic", $file-formats: woff woff2 ttf){
+  font-style: italic;
+  font-weight: 400;
+};
+@include font-face("Clear Sans", "../fonts/clearsans/clearsansbold", $file-formats: woff woff2 ttf){
   font-style: normal;
-  font-weight: bold;
+  font-weight: 700;
 };
-
-@include font-face("HelveticaNeueCyr", "../fonts/HelveticaNeueCyr/HelveticaNeueCyr-Light", $file-formats: eot woff ttf svg){
+@include font-face("Clear Sans", "../fonts/clearsans/clearsansbolditalic", $file-formats: woff woff2 ttf){
+  font-style: italic;
+  font-weight: 700;
+};
+@include font-face("Clear Sans", "../fonts/clearsans/clearsanslight", $file-formats: woff woff2 ttf){
   font-style: normal;
   font-weight: 300;
 };
-
-@include font-face("HelveticaNeueCyr", "../fonts/HelveticaNeueCyr/HelveticaNeueCyr-Medium", $file-formats: eot woff ttf svg){
+@include font-face("Clear Sans", "../fonts/clearsans/clearsansmedium", $file-formats: woff woff2 ttf){
   font-style: normal;
   font-weight: 500;
 };
-
-//@include font-face("HelveticaNeueCyr", "../fonts/HelveticaNeueCyr/HelveticaNeueCyr-Roman", $file-formats: eot woff ttf svg){
-//  font-style: normal;
-//  font-weight: bold;
-//};
-
-@include font-face("HelveticaNeueCyr", "../fonts/HelveticaNeueCyr/HelveticaNeueCyr-Thin", $file-formats: eot woff ttf svg){
+@include font-face("Clear Sans", "../fonts/clearsans/clearsansmediumitalic", $file-formats: woff woff2 ttf){
+  font-style: italic;
+  font-weight: 500;
+};
+@include font-face("Clear Sans", "../fonts/clearsans/clearsansthin", $file-formats: woff woff2 ttf){
   font-style: normal;
   font-weight: 100;
 };
-

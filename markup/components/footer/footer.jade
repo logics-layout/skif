@@ -1,6 +1,33 @@
 mixin footer(data)
     footer.footer.not-styleLink
         .container
+            .footer__text
+                p Компания «Скиф» существует на рынке более 15 лет. Наша компания является ведущим оператором и импортером кондитерских изделий из стран Европы и Азии. Мы предлагаем широкий ассортимент продукции для детей. Весь товар сертифицирован и имеет штрих-код стандарта ЕАN13. Качество нашей продукции, во многом благодаря использованию натуральной фруктовой консистенции, современного оборудования и технологии, является одним из лучших в своей ассортиментной нише и соответствует всем гигиеническим нормам и стандартам, превосходя многие из существующих на рынке аналогичных видов продукции. 
+                p Наша компания постоянно расширяет ассортиментную линейку товаров под собственной ТМ СКИФ. Компания «Скиф» занимает лидирующие позиции по сбыту продукта в данном сегменте рынка, благодаря низким ценам и устойчивым долгосрочными связям с разными субъектами РФ.
+            br
+            br
+            .footer__bottom
+                .footer__table
+                    .footer__table-cell
+                        .footer__tableLogo
+                            .footer__tableLogo-cell
+                                a(href='#').footer__logo: +img('assets/footer/logo', 'png')
+                            .footer__tableLogo-cell
+                                span © 2017, ООО «Скиф». #[br] Оптово-розничная торговля продуктами питания, детские кондитерские изделия.
+                        br.hidden-lg-up
+                    .footer__table-cell.text-right
+                        .footer__copyrightBlock
+                            .footer__copyrightBlock-content
+                                a(href="#").footer__copyright
+                                    span.footer__copyright-section Разработка #[br] и продвижение сайта —
+                                    span.footer__copyright-section
+                                        span.db.footer__copyright-cloud
+                                            span.db.footer__copyright-cloud-icon: +icon('cloud')
+                                            span.db.footer__copyright-cloud-title ИНСАЙТ
+
+
+
+
 
 
 

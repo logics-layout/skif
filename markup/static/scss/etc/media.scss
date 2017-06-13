@@ -6,11 +6,41 @@ body, html{
 }
 
 @include my-media-query(max, map_get($grid-breakpoints, xl) - 1) {
-
+  .header__logo {
+    width: 185px;
+    margin-top: 27px;
+  }
 }
 
 @include my-media-query(max, map_get($grid-breakpoints, lg) - 1) {
-
+  .footer {
+    &__table {
+      display: block;
+      &-cell {
+        display: block;
+        +*{
+          padding-left: 0;
+          padding-top: 15px;
+        }
+      }
+    }
+    &__copyrightBlock{
+      text-align: center;
+      &-content{
+      }
+    }
+  }
+  .footer__tableLogo{
+    display: block;
+    text-align: center;
+    &-cell{
+      display: block;
+      +*{
+        padding-left: 0;
+        padding-top: 10px;
+      }
+    }
+  }
 }
 
 @include my-media-query(min, map_get($grid-breakpoints, xs)) {
@@ -26,7 +56,18 @@ body, html{
 }
 
 @include my-media-query(min, map_get($grid-breakpoints, lg)) {
-
+  .footer {
+    > .container {
+      position: relative;
+      &:after {
+        content: url('%=static=%assets/footer/after.png');
+        position: absolute;
+        left: 100%;
+        top: 0;
+        margin-left: -38px;
+      }
+    }
+  }
 }
 
 @include my-media-query(min, map_get($grid-breakpoints, xl)) {
@@ -39,4 +80,17 @@ body, html{
 
 @include my-media-query(max, map_get($grid-breakpoints, sm) - 1) {
 
+  .footer__copyrightBlock{
+    background: rgba(238, 238, 238, 0.26);
+    margin: 0 -15px;
+    margin-bottom: -29px;
+    padding: 24px 0;
+  }
+  .header {
+    &-mobile {
+      &__phone {
+        font-size: 18px;
+      }
+    }
+  }
 }
