@@ -46,16 +46,17 @@
     max-width: 100%;
     display: inline-block;
     &:hover{
-      background-color: #d6437a;
-      color: #fff;
+      background-color: #a83957 !important;
+      border-color: #a83957 !important;
     }
   }
   &:hover{
     border-color: #d6437a;
     border-radius: 4px;
-    box-shadow: 0 10px 15px rgba(103, 23, 121, 0.15);
-    .item__title{
-      color: #d6437a;
+    //box-shadow: 0 10px 15px rgba(103, 23, 121, 0.15);
+    .item__btn{
+      background-color: #d6437a;
+      color: #fff;
     }
   }
 }

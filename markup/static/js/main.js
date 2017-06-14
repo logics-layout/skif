@@ -150,54 +150,17 @@ if ($.fn.magnificPopup) {
     })
 }
 
-// $('.catalog-category-list a').click(function(e){
-//     var _this = $(this),
-//         list = _this.next('ul'),
-//         parent = _this.parent(),
-//         className = 'active',
-//         time = 300;
-//
-//     if(list[0]){
-//         e.preventDefault();
-//         parent.toggleClass(className);
-//         list.slideToggle(time);
-//
-//         parent.siblings().removeClass(className)
-//             .find('li').removeClass(className)
-//             .end()
-//             .find('ul').slideUp(time);
-//     }
-// });
+$('.catalog-category a').click(function(e){
+    var _this = $(this),
+        list = _this.next('ul'),
+        parent = _this.parent(),
+        time = 300;
 
 
-// $('.collapse').find('.collapse-toggle').click(function(e){
-//     e.preventDefault();
-//     var _this = $(this),
-//         content = _this.next(),
-//         parentContent = _this.closest('.collapse-toggle-content')[0]?_this.closest('.collapse-toggle-content'):_this.closest('.collapse'),
-//         time = 300,
-//         className = 'active';
-//
-//     if(content.hasClass('collapse-toggle-content')){
-//         content.slideToggle(time);
-//         _this.parent().toggleClass(className);
-//
-//         parentContent.find('.collapse-toggle-content').not(content).stop().slideUp(time);
-//         parentContent.find('.collapse-toggle').not(_this).parent().removeClass(className);
-//     }
-// });
-
-
-// var videoBlock = $('.videoBlock'),
-//     videoBlockLabel = $('.videoBlock__label'),
-//     videoBlockIframe = $('.videoBlock__main-iframe');
-//
-// videoBlockLabel.click(function(){
-//     var _this = $(this);
-//
-//     _this.addClass('active').siblings().removeClass('active');
-//     var iframe = _this.find('iframe');
-//     if(iframe[0]){
-//         videoBlockIframe.attr('src', iframe.attr('src'));
-//     }
-// });
+    parent.toggleClass('active');
+    if(list[0]){
+        e.preventDefault();
+        list.slideToggle(time);
+    }
+    parent.siblings().removeClass('active').children('ul').slideUp(time);
+});

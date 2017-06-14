@@ -1,0 +1,108 @@
+extends main
+include ../components/item/item
+block head
+    - var headData = {title: "Каталог товаров"}
+
+    link(href="%=static=%css/separate-css/slick.css", rel="stylesheet", type="text/css")
+
+block content
+    .content__wrapper-well.content__wrapper-well_topMargin
+        .content__wrapper-siteBar
+            .content__wrapper-siteBar-nav
+                .catalog-category.not-styleLink
+                    ul
+                        li: a(href="#"): span Аскорбинка
+                        li: a(href="#"): span Драже
+                        li.active.open
+                            a(href="#"): span Карамель
+                            ul
+                                li: a(href='#'): span “Трость” клубника
+                                li: a(href='#'): span “Трость” тутти фрутти в драже
+                                li: a(href='#'): span “Трость” тутти фрутти в блоке
+
+                        li
+                            a(href="#"): span Зефирная косичка
+                            ul
+                                li: a(href='#'): span “Трость” клубника
+                                li: a(href='#'): span “Трость” тутти фрутти в драже
+                                li: a(href='#'): span “Трость” тутти фрутти в блоке
+                        li
+                            a(href="#"): span Шипучка
+                            ul
+                                li: a(href='#'): span “Трость” клубника
+                                li: a(href='#'): span “Трость” тутти фрутти в драже
+                                li: a(href='#'): span “Трость” тутти фрутти в блоке
+                        li: a(href="#"): span Жидкая конфета
+                        li: a(href="#"): span Жевательная резинка
+
+                br
+                .content__wrapper-siteBar-nav-content
+                    a(href='#').db.not-styleLink.color-greyTwo.hidden-md-down
+                        span.link-download
+                            span.link-download__table
+                                span.link-download__icon: +icon('lists', 'svg-lists', 26, 35)
+                                span.link-download__title: span.color-greyTwo__title.color-greyTwo__title_dashed.color-greyTwo__title_viewBorder Скачайте прайс-лист
+
+
+            .content__wrapper-siteBar-content
+                .row
+                    .col-lg-4.text-center
+                        +img('content/item')
+                    .col-lg-8
+                        br
+                        br
+                        .row: .col-lg-10.col-xs-12
+                            p(style="margin-bottom: 15px;").db.text-big 24 гр 12*50
+                            p Когда-то конфеты считались лекарством и даже переводились с латинского как «готовые снадобья». В Древнем Египте сладкие лакомства делали из меда и фиников, древние римляне добавляли к меду орехи, кунжут и маковые зерна
+
+                        span.price 1 280 ₽
+                        span.hidden-xs-down &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        span.hidden-sm-up &nbsp;&nbsp;&nbsp;
+                        a(href='#').dib.not-styleLink
+                            span.btn-border ЗАКАЗАТЬ ТОВАР
+
+                hr
+                h3 Смотрите также:
+                .item-list
+                    - for(var i = 0; i<3; i++)
+                        .item-list__section.item-list__section_col-3: +item(i)
+
+    br.hidden-md-down
+
+block script
+    script(src="%=static=%js/separate-js/slick.min.js" type="text/javascript")
+    script(src="%=static=%js/separate-js/jquery.magnific-popup.min.js" type="text/javascript")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
